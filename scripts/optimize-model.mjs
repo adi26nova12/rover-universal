@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url'
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const [srcArg, outArg, sizeArg, ratioArg] = process.argv.slice(2)
 const SRC = resolve(root, srcArg ?? 'assets-src/boot-higgsfield.glb')
-const OUT = resolve(root, outArg ?? 'public/models/boot.glb')
+const OUT = resolve(root, outArg ?? 'models/boot.glb')
 const TEXTURE_SIZE = Number(sizeArg ?? process.env.TEXTURE_SIZE ?? 2048)
 const RATIO = Number(ratioArg ?? 1) // < 1 → meshopt simplify (normal map keeps the detail)
 

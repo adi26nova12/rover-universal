@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/publish-root.mjs",
     "preview": "vite preview",
     "build:model": "node scripts/build-boot.mjs",
     "optimize:model": "node scripts/optimize-model.mjs",
-    "optimize:models:mobile": "node scripts/optimize-model.mjs assets-src/boot-higgsfield.glb public/models/m/boot.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/sneaker-higgsfield.glb public/models/m/sneaker.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/maryjane-higgsfield.glb public/models/m/maryjane.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/sandal-higgsfield.glb public/models/m/sandal.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/prewalker-higgsfield.glb public/models/m/prewalker.glb 1024 0.4",
+    "optimize:models:mobile": "node scripts/optimize-model.mjs assets-src/boot-higgsfield.glb models/m/boot.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/sneaker-higgsfield.glb models/m/sneaker.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/maryjane-higgsfield.glb models/m/maryjane.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/sandal-higgsfield.glb models/m/sandal.glb 1024 0.4 && node scripts/optimize-model.mjs assets-src/prewalker-higgsfield.glb models/m/prewalker.glb 1024 0.4",
     "extract:garden": "node scripts/extract-garden.mjs",
-    "optimize:models": "node scripts/optimize-model.mjs && node scripts/optimize-model.mjs assets-src/sneaker-higgsfield.glb public/models/sneaker.glb 2048 && node scripts/optimize-model.mjs assets-src/maryjane-higgsfield.glb public/models/maryjane.glb 2048 && node scripts/optimize-model.mjs assets-src/sandal-higgsfield.glb public/models/sandal.glb 2048 && node scripts/optimize-model.mjs assets-src/prewalker-higgsfield.glb public/models/prewalker.glb 2048"
+    "optimize:models": "node scripts/optimize-model.mjs && node scripts/optimize-model.mjs assets-src/sneaker-higgsfield.glb models/sneaker.glb 2048 && node scripts/optimize-model.mjs assets-src/maryjane-higgsfield.glb models/maryjane.glb 2048 && node scripts/optimize-model.mjs assets-src/sandal-higgsfield.glb models/sandal.glb 2048 && node scripts/optimize-model.mjs assets-src/prewalker-higgsfield.glb models/prewalker.glb 2048"
   },
   "devDependencies": {
     "@gltf-transform/core": "^4.5.0",
