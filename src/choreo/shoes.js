@@ -7,14 +7,15 @@
  * cheaper materials and a lower pixel ratio. Decided once at load.
  */
 export const LITE = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px), (hover: none) and (pointer: coarse)').matches
-const dir = LITE ? '/models/m' : '/models'
+const BASE = import.meta.env.BASE_URL // '/' locally, '/rover-universal/' on GitHub Pages
+const dir = LITE ? `${BASE}models/m` : `${BASE}models`
 
 export const SHOES = [
-  { id: 'boot', url: `${dir}/boot.glb`, photo: '/photos/boot.webp', rotation: [0, Math.PI, 0], name: 'Classic Boot' },
-  { id: 'sneaker', url: `${dir}/sneaker.glb`, photo: '/photos/sneaker.webp', rotation: [0, Math.PI, 0], name: 'Everyday Sneaker' },
-  { id: 'maryjane', url: `${dir}/maryjane.glb`, photo: '/photos/maryjane.webp', rotation: [0, Math.PI, 0], name: 'Mary Jane' },
-  { id: 'sandal', url: `${dir}/sandal.glb`, photo: '/photos/sandal.webp', rotation: [0, Math.PI, 0], name: 'Closed Sandal' },
-  { id: 'prewalker', url: `${dir}/prewalker.glb`, photo: '/photos/prewalker.webp', rotation: [0, Math.PI, 0], name: 'Pre-walker' },
+  { id: 'boot', url: `${dir}/boot.glb`, photo: `${BASE}photos/boot.webp`, rotation: [0, Math.PI, 0], name: 'Classic Boot' },
+  { id: 'sneaker', url: `${dir}/sneaker.glb`, photo: `${BASE}photos/sneaker.webp`, rotation: [0, Math.PI, 0], name: 'Everyday Sneaker' },
+  { id: 'maryjane', url: `${dir}/maryjane.glb`, photo: `${BASE}photos/maryjane.webp`, rotation: [0, Math.PI, 0], name: 'Mary Jane' },
+  { id: 'sandal', url: `${dir}/sandal.glb`, photo: `${BASE}photos/sandal.webp`, rotation: [0, Math.PI, 0], name: 'Closed Sandal' },
+  { id: 'prewalker', url: `${dir}/prewalker.glb`, photo: `${BASE}photos/prewalker.webp`, rotation: [0, Math.PI, 0], name: 'Pre-walker' },
 ]
 
 /**

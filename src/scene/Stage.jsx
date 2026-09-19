@@ -6,7 +6,7 @@ import * as THREE from 'three'
 import { gsap } from '../gsap'
 import { LITE, SHOES, intro, motion, pointer, poses } from '../choreo/shoes'
 
-const DRACO = '/draco/'
+const DRACO = `${import.meta.env.BASE_URL}draco/`
 const CAM_Z = 10
 const FOV = 30
 const VIEW_H = 2 * Math.tan(THREE.MathUtils.degToRad(FOV / 2)) * CAM_Z // world height visible at z = 0
