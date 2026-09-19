@@ -1,0 +1,11 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# large / third-party / superseded sources (kept locally only)
+assets-src/reference/
+assets-src/legacy-v1/
+assets-src/v1-models/
+assets-src/photos/v1/
+assets-src/*.mp4
